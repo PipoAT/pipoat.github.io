@@ -1,4 +1,26 @@
 h1 {
-    color: blue;
     text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.cover-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/homepage_background.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+    color: black;
+    background-color: lightgrey;
+    padding: 5vh;
 }
