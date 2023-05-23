@@ -28,7 +28,7 @@ body {
     margin: 0 auto;
     color: black;
     background-color: lightgrey;
-    opacity: 75%;
+    opacity: 90%;
     padding: 5px;
     border-radius: 25px;
 
@@ -62,3 +62,9 @@ body {
   right: 10px;
   cursor: pointer;
 }
+
+.link-icon {
+  margin-right: 5px;
+  background-color: black;
+}
+
