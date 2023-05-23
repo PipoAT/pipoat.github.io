@@ -1,6 +1,7 @@
 h1,
 p {
   text-align: center;
+
 }
 
 body {
@@ -23,11 +24,11 @@ body {
 .content {
     text-align: center;
     width: 80%;
-    max-width: 500px;
     height: fit-content;
     margin: 0 auto;
     color: black;
     background-color: lightgrey;
+    opacity: 75%;
     padding: 5px;
     border-radius: 25px;
 
