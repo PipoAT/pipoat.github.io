@@ -23,12 +23,12 @@ body {
 
 .content {
     text-align: center;
-    width: 75%;
+    width: 60%;
     height: fit-content;
     margin: 0 auto;
     color: black;
     background-color: lightgrey;
-    opacity: 90%;
+    opacity: 95%;
     padding: 5px;
     border-radius: 25px;
 
@@ -68,3 +68,8 @@ body {
   background-color: black;
 }
 
+.aboutmeimg {
+  width: 275px;
+  height: 400px;
+  padding-bottom: 2px;
+}
