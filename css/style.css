@@ -1,7 +1,6 @@
 h1,
 p {
   text-align: center;
-
 }
 
 body {
@@ -22,19 +21,16 @@ body {
 }
 
 .content {
-    text-align: center;
-    width: 60%;
-    height: fit-content;
-    margin: 0 auto;
-    color: black;
-    background-color: lightgrey;
-    opacity: 95%;
-    padding: 5px;
-    border-radius: 25px;
-
-  }
-  
-
+  text-align: center;
+  width: 75%;
+  height: fit-content;
+  margin: 0 auto;
+  color: black;
+  background-color: lightgrey;
+  opacity: 0.95;
+  padding: 5px;
+  border-radius: 25px;
+}
 
 .navbar {
   position: fixed;
@@ -69,7 +65,16 @@ body {
 }
 
 .aboutmeimg {
-  width: 275px;
-  height: 400px;
-  padding-bottom: 2px;
+  width: 100%;
+  max-width: 275px;
+  height: auto;
+  padding: 2px;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .content {
+    width: 90%;
+  }
 }
