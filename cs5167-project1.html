@@ -63,6 +63,44 @@
             <p>I have been reaching out to colleagues within the User Interface class, specifically about the design and layout, and have received positive feedback about how my layout incorporates the boxes to separate and group the information appropriately. Additionally, colleagues have appreciated the color scheme and its contrast between the background and text color as it was noted that it drew people’s attention while keeping things understandable.</p>
             <br>
             <h2>Interface in Detail</h2>
+            <p>The interface is only one single screen that users can view without having to scroll anything.
+                The left side of the interface/screen consists of the overview information, including the following from top to bottom:
+            </p>
+            <ul>
+                <li>Username/User Logged In</li>
+                <li>Current Date</li>
+                <li>Days since user created the login</li>
+                <li>Days total relating to the daily active streak</li>
+            </ul>
+            <br>
+            <p>The middle consists of the main form, and entry navigation, to where users can fill out one entry per day and view all entries from before. The layout in the middle section is as follows from top to bottom:</p>
+            <ul>
+                <li>The entry navigation, which displays the date of the current entry selected alongside two arrows (the left arrow on the left side of the date, and the right arrow on the right side of the date) to indicate that users can go back and forth between entries.</li>
+                <li>The main form, which allows users to enter information and save/edit the form. The following question with its type is as follows from top to bottom:
+                    <ul>
+                        <li>“Goal”: A textarea to allow a user input of any string of text/characters to enter their desired goal for the day</li>
+                        <li>“Did you feel anxious today?”: A selection of yes or no to indicate if a user felt anxious</li>
+                        <li>“What emotions were you experiencing?”: A textarea to allow a user input of any string of text/characters to enter their emotions associated with their anxiety</li>
+                        <li>“What thoughts were you experiencing?”: A textarea to allow a user input of any string of text/characters to enter the associated thoughts associated with their anxiety</li>
+                        <li>“What events occurred that led up to or triggered your anxiety and/or emotions?”: A textarea to allow a user input of any string of text/characters to enter the events that led up to the anxiety feeling</li>
+                        <li>“How long did you experience anxiety/emotions in hours?”: A numeric field that accepts a number as an input to enter the number of hours that the user felt anxious</li>
+                        <li>“Did it affect any daily routines or tasks for the day?”: A selection of yes or no to indicate if a user could not perform daily routines as normal</li>
+                    </ul>
+                </li>
+                <li>The form action buttons, which allow the submission, editing, and deletion of the form, which is represented as the following from left to right:
+                    <ul>
+                        <li>“Save”, which on click will save the new entry or modified entry</li>
+                        <li>“Delete”, which on click will delete the existing entry</li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            <p>The right side of the interface is the data for the user to review, including the following from top to bottom:</p>
+            <ul>
+                <li>Number of days in the past week that a user felt anxious, which tracks and displays a numeric value (from a range of 0-7) that shows how many days a user selected “Yes” on the “Did you feel anxious today?” question within the past 7 days.</li>
+                <li>Number of days in the past week that it has affected daily tasks, which tracks and displays a numeric value (from a range of 0-7) that shows how many days a user selected “Yes” on the “Did it affect any daily routines or tasks for the day?” question within the past 7 days.</li>
+                <li>Average time in past week of feeling anxious, which tracks and displays the average numeric value in hours of the last week’s entries from the “How long did you experience anxiety/emotions in hours”, taken to two decimal places.</li>
+            </ul>
             <br>
             <h2>Implementation</h2>
             <p>This application is implemented using the Svelte framework, consisting of HTML, CSS, and JavaScript code, without any other usage of frameworks. The code for this application is hosted on GitHub and is hosted live with the Vercel service, which is connected to GitHub.</p>
