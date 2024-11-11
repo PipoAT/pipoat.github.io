@@ -1,158 +1,185 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A.T. Pipo's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Andrew T. Pipo</title>
+        <link href="index.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Andrew T. Pipo's Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutme.html">About Me</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Resume
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <li><a class="dropdown-item" href="resume.html">Resume</a></li>
-                          <li><a class="dropdown-item" href="experience.html">Experience</a></li>                   
+            <div class="row">
+                <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
+                    <div class="position-sticky">
+                        <br>
+                        <img src="UC_CEAS.png" alt="UC CEAS Logo" style="max-width: 100%; background-color: white;">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">
+                                    Home
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="aboutme.html">
+                                    About Me
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">
+                                    Resume
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#UI" role="button" aria-expanded="false" aria-controls="UI">
+                                    CS5167 - UI Portfolio
+                                </a>
+                                <div class="collapse" id="UI">
+                                    <ul class="nav flex-column ms-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="cs5167-project1.html">Project 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="cs5167-project2.html">Project 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="cs5167-project3.html">Project 3</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="cs5167-project4.html">Project 4</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item"></li>
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#ENED" role="button" aria-expanded="false" aria-controls="ENED">
+                                    ENED Portfolio
+                                </a>
+                                <div class="collapse" id="ENED">
+                                    <ul class="nav flex-column ms-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://ucba-ened1100.github.io/">ENED1100</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://ucba-ened1120.github.io/">ENED1120</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item"></li>
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#externallinks" role="button" aria-expanded="false" aria-controls="externallinks">
+                                    External Links
+                                </a>
+                                <div class="collapse" id="externallinks">
+                                    <ul class="nav flex-column ms-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://www.linkedin.com/in/andrew-pipo/">LinkedIn</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://github.com/PipoAT">GitHub</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="cs5167.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            CS5167 - User Interface I
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="cs5167-project1.html">Project 1</a></li>
-                            <li><a class="dropdown-item" href="cs5167-project2.html">Project 2</a></li>
-                            <li><a class="dropdown-item" href="cs5167-project3.html">Project 3</a></li>
-                            <li><a class="dropdown-item" href="cs5167-project4.html">Project 4</a></li>
+                    </div>
+                </nav>
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <br>
+                    <div class="alert alert-dark d-flex align-items-center justify-content-center" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-exclamation-circle me-2" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+                        </svg>
+                        <span>Pardon the mess! I am working to update this website to reflect my various works!</span>
+                      </div>
+                    <div class="header text-center rounded border p-3 my-3">
+                        <br>
+                        <h1>User Interface I</h1>
+                        <br>
+                        <h2>Project 1: Recording the Journey</h2>
+                        <br>
+                    </div>
+                    <div class="main-content text-center rounded border p-3 my-3">
+                        <a href="css/assets/Pipo-Documentation-Proj1-CS5167.docx">DO NOT CLICK - WILL FIX SOON</a>
+                        <br>
+                        <a href="css/assets/Pipo-Proj1-Design.pdf">DO NOT CLICK - WILL FIX SOON</a>
+                        <br>
+                        <br>
+                        <h2>Description of Project</h2>
+                        <p>The purpose of this project is to develop an application that tracks and journals goals and various activities. My focus was around mental health, specifically tracking anxiety, any associated feelings, what activities or events triggered the anxious feeling, if it affected any daily tasks, and how long it has lasted for the user.</p>
+                        <p>The rationale behind my focus was that I have been personally struggling with mental health, experiencing severe anxiety, and that part of the advice that was handed to me by several professionals, friends, and family was to write down everything. This would include any thoughts, emotions, triggers, impacts on my life, and beyond. I felt that developing an application with a mental health focus could benefit myself as well as others that are also struggling in their own ways.</p>
+                        <br>
+                        <h2>Interviews and Feedback</h2>
+                        <p>In interviewing and collaborating with colleagues early in the project, they presented to me with concerns and expectations that the user must be able to record metrics that can allow viewing of trends or quantitative data over a period, as it is not easily measurable based on purely open-ended questions that could possibly be non-definitive over a course of time.</p>
+                        <p>It was also brought up that users should be able to navigate through entries to view history, in a manner that is easy to learn and understand.</p>
+                        <p>I have been reaching out to colleagues within the User Interface class, specifically about the design and layout, and have received positive feedback about how my layout incorporates the boxes to separate and group the information appropriately. Additionally, colleagues have appreciated the color scheme and its contrast between the background and text color as it was noted that it drew people’s attention while keeping things understandable.</p>
+                        <br>
+                        <h2>Interface in Detail</h2>
+                        <p>The interface is only one single screen that users can view without having to scroll anything.
+                            The left side of the interface/screen consists of the overview information, including the following from top to bottom:
+                        </p>
+                        <ul>
+                            <li>Username/User Logged In</li>
+                            <li>Current Date</li>
+                            <li>Days since user created the login</li>
+                            <li>Days total relating to the daily active streak</li>
                         </ul>
-                    </li>
-                </ul>
+                        <br>
+                        <p>The middle consists of the main form, and entry navigation, to where users can fill out one entry per day and view all entries from before. The layout in the middle section is as follows from top to bottom:</p>
+                        <ul>
+                            <li>The entry navigation, which displays the date of the current entry selected alongside two arrows (the left arrow on the left side of the date, and the right arrow on the right side of the date) to indicate that users can go back and forth between entries.</li>
+                            <li>The main form, which allows users to enter information and save/edit the form. The following question with its type is as follows from top to bottom:
+                                <ul>
+                                    <li>“Goal”: A textarea to allow a user input of any string of text/characters to enter their desired goal for the day</li>
+                                    <li>“Did you feel anxious today?”: A selection of yes or no to indicate if a user felt anxious</li>
+                                    <li>“What emotions were you experiencing?”: A textarea to allow a user input of any string of text/characters to enter their emotions associated with their anxiety</li>
+                                    <li>“What thoughts were you experiencing?”: A textarea to allow a user input of any string of text/characters to enter the associated thoughts associated with their anxiety</li>
+                                    <li>“What events occurred that led up to or triggered your anxiety and/or emotions?”: A textarea to allow a user input of any string of text/characters to enter the events that led up to the anxiety feeling</li>
+                                    <li>“How long did you experience anxiety/emotions in hours?”: A numeric field that accepts a number as an input to enter the number of hours that the user felt anxious</li>
+                                    <li>“Did it affect any daily routines or tasks for the day?”: A selection of yes or no to indicate if a user could not perform daily routines as normal</li>
+                                </ul>
+                            </li>
+                            <li>The form action buttons, which allow the submission, editing, and deletion of the form, which is represented as the following from left to right:
+                                <ul>
+                                    <li>“Save”, which on click will save the new entry or modified entry</li>
+                                    <li>“Delete”, which on click will delete the existing entry</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br>
+                        <p>The right side of the interface is the data for the user to review, including the following from top to bottom:</p>
+                        <ul>
+                            <li>Number of days in the past week that a user felt anxious, which tracks and displays a numeric value (from a range of 0-7) that shows how many days a user selected “Yes” on the “Did you feel anxious today?” question within the past 7 days.</li>
+                            <li>Number of days in the past week that it has affected daily tasks, which tracks and displays a numeric value (from a range of 0-7) that shows how many days a user selected “Yes” on the “Did it affect any daily routines or tasks for the day?” question within the past 7 days.</li>
+                            <li>Average time in past week of feeling anxious, which tracks and displays the average numeric value in hours of the last week’s entries from the “How long did you experience anxiety/emotions in hours”, taken to two decimal places.</li>
+                        </ul>
+                        <br>
+                        <h2>Implementation</h2>
+                        <p>This application is implemented using the Svelte framework, consisting of HTML, CSS, and JavaScript code, without any other usage of frameworks. The code for this application is hosted on GitHub and is hosted live with the Vercel service, which is connected to GitHub.</p>
+                        <br>
+                        <h2>AI Usage</h2>
+                        <p>I utilized the GitHub Copilot extension for various aspects within Visual Studio Code as I do have a student-verified Pro Account with GitHub, which allows access to the Copilot tool. I was able to utilize the AI tool to help develop and debug the JavaScript/Backend code as I was encountering issues with the entries not updating and displaying correctly, in addition to the buttons on the main interface not calling the desired functions as intended.</p>
+                        <p>Additionally, I have utilized Copilot to automatically generate comments within the code, which I have manually gone through and verified its accuracy. I have also been automatically generating the commit messages that are seen on GitHub for efficiency purposes as I have made the application live prior to developing and been pushing frequently to reflect my development online as I went along the process.</p>
+                        <br>
+                        <h2>Future Work</h2>
+                        <p>Future work will include enhancing the layout to be evenly spaced and aligned with each other, as currently it is possible to see that the bottoms of the boxes are not in perfect line. Moreso, adjusting the layout to ensure that it is optimal on both laptop/desktop screens and mobile screens would be future work to improve accessibility to users given our usage of smart devices in our day and age.</p>
+                        <p>Additionally, future work will also include fine-tuning the backend functionality of the form to ensure that users do not click the “delete” button when filing out a new entry as currently, there is a bug that the delete button will light up as active if a user types any data into a new field, though clicking the button will not erase any data. This can be seen as misleading and ideally, the delete button would only be active upon saving the new entry for the first time. There will also be changes to where the save button is replaced with a edit button to indicate that the form can be editable and not just utilize the same save button, which users as a result may believe that the form is not able to be changed.</p>
+                        <br>
+                        <h2>Source Code and Demo</h2>
+                        <a href="https://github.com/PipoAT/CS5167-Project-1">Soruce Code hosted on GitHub</a>
+                        <br>
+                        <a href="https://youtu.be/WMsM3AGvk8g">Demonstration of UI</a>
+                        <br>
+                        <a href="https://cs-5167-project-1.vercel.app/">Live Application</a>
+                    </div>
+                </main>
             </div>
         </div>
-    </nav>
-    <div class="cover-image">
-        <div class="content">
-            <h1>Project 1: Recording the Journey</h1>
-            <br>
-            <h2>Documentation Links</h2>
-            <a href="css/assets/Pipo-Documentation-Proj1-CS5167.docx">Documentation (.docx)</a>
-            <br>
-            <a href="css/assets/Pipo-Proj1-Design.pdf">Designs</a>
-            <br>
-            <br>
-            <h2>Description of Project</h2>
-            <p>The purpose of this project is to develop an application that tracks and journals goals and various activities. My focus was around mental health, specifically tracking anxiety, any associated feelings, what activities or events triggered the anxious feeling, if it affected any daily tasks, and how long it has lasted for the user.</p>
-            <p>The rationale behind my focus was that I have been personally struggling with mental health, experiencing severe anxiety, and that part of the advice that was handed to me by several professionals, friends, and family was to write down everything. This would include any thoughts, emotions, triggers, impacts on my life, and beyond. I felt that developing an application with a mental health focus could benefit myself as well as others that are also struggling in their own ways.</p>
-            <br>
-            <h2>Interviews and Feedback</h2>
-            <p>In interviewing and collaborating with colleagues early in the project, they presented to me with concerns and expectations that the user must be able to record metrics that can allow viewing of trends or quantitative data over a period, as it is not easily measurable based on purely open-ended questions that could possibly be non-definitive over a course of time.</p>
-            <p>It was also brought up that users should be able to navigate through entries to view history, in a manner that is easy to learn and understand.</p>
-            <p>I have been reaching out to colleagues within the User Interface class, specifically about the design and layout, and have received positive feedback about how my layout incorporates the boxes to separate and group the information appropriately. Additionally, colleagues have appreciated the color scheme and its contrast between the background and text color as it was noted that it drew people’s attention while keeping things understandable.</p>
-            <br>
-            <h2>Interface in Detail</h2>
-            <p>The interface is only one single screen that users can view without having to scroll anything.
-                The left side of the interface/screen consists of the overview information, including the following from top to bottom:
-            </p>
-            <ul>
-                <li>Username/User Logged In</li>
-                <li>Current Date</li>
-                <li>Days since user created the login</li>
-                <li>Days total relating to the daily active streak</li>
-            </ul>
-            <br>
-            <p>The middle consists of the main form, and entry navigation, to where users can fill out one entry per day and view all entries from before. The layout in the middle section is as follows from top to bottom:</p>
-            <ul>
-                <li>The entry navigation, which displays the date of the current entry selected alongside two arrows (the left arrow on the left side of the date, and the right arrow on the right side of the date) to indicate that users can go back and forth between entries.</li>
-                <li>The main form, which allows users to enter information and save/edit the form. The following question with its type is as follows from top to bottom:
-                    <ul>
-                        <li>“Goal”: A textarea to allow a user input of any string of text/characters to enter their desired goal for the day</li>
-                        <li>“Did you feel anxious today?”: A selection of yes or no to indicate if a user felt anxious</li>
-                        <li>“What emotions were you experiencing?”: A textarea to allow a user input of any string of text/characters to enter their emotions associated with their anxiety</li>
-                        <li>“What thoughts were you experiencing?”: A textarea to allow a user input of any string of text/characters to enter the associated thoughts associated with their anxiety</li>
-                        <li>“What events occurred that led up to or triggered your anxiety and/or emotions?”: A textarea to allow a user input of any string of text/characters to enter the events that led up to the anxiety feeling</li>
-                        <li>“How long did you experience anxiety/emotions in hours?”: A numeric field that accepts a number as an input to enter the number of hours that the user felt anxious</li>
-                        <li>“Did it affect any daily routines or tasks for the day?”: A selection of yes or no to indicate if a user could not perform daily routines as normal</li>
-                    </ul>
-                </li>
-                <li>The form action buttons, which allow the submission, editing, and deletion of the form, which is represented as the following from left to right:
-                    <ul>
-                        <li>“Save”, which on click will save the new entry or modified entry</li>
-                        <li>“Delete”, which on click will delete the existing entry</li>
-                    </ul>
-                </li>
-            </ul>
-            <br>
-            <p>The right side of the interface is the data for the user to review, including the following from top to bottom:</p>
-            <ul>
-                <li>Number of days in the past week that a user felt anxious, which tracks and displays a numeric value (from a range of 0-7) that shows how many days a user selected “Yes” on the “Did you feel anxious today?” question within the past 7 days.</li>
-                <li>Number of days in the past week that it has affected daily tasks, which tracks and displays a numeric value (from a range of 0-7) that shows how many days a user selected “Yes” on the “Did it affect any daily routines or tasks for the day?” question within the past 7 days.</li>
-                <li>Average time in past week of feeling anxious, which tracks and displays the average numeric value in hours of the last week’s entries from the “How long did you experience anxiety/emotions in hours”, taken to two decimal places.</li>
-            </ul>
-            <br>
-            <h2>Implementation</h2>
-            <p>This application is implemented using the Svelte framework, consisting of HTML, CSS, and JavaScript code, without any other usage of frameworks. The code for this application is hosted on GitHub and is hosted live with the Vercel service, which is connected to GitHub.</p>
-            <br>
-            <h2>AI Usage</h2>
-            <p>I utilized the GitHub Copilot extension for various aspects within Visual Studio Code as I do have a student-verified Pro Account with GitHub, which allows access to the Copilot tool. I was able to utilize the AI tool to help develop and debug the JavaScript/Backend code as I was encountering issues with the entries not updating and displaying correctly, in addition to the buttons on the main interface not calling the desired functions as intended.</p>
-            <p>Additionally, I have utilized Copilot to automatically generate comments within the code, which I have manually gone through and verified its accuracy. I have also been automatically generating the commit messages that are seen on GitHub for efficiency purposes as I have made the application live prior to developing and been pushing frequently to reflect my development online as I went along the process.</p>
-            <br>
-            <h2>Future Work</h2>
-            <p>Future work will include enhancing the layout to be evenly spaced and aligned with each other, as currently it is possible to see that the bottoms of the boxes are not in perfect line. Moreso, adjusting the layout to ensure that it is optimal on both laptop/desktop screens and mobile screens would be future work to improve accessibility to users given our usage of smart devices in our day and age.</p>
-            <p>Additionally, future work will also include fine-tuning the backend functionality of the form to ensure that users do not click the “delete” button when filing out a new entry as currently, there is a bug that the delete button will light up as active if a user types any data into a new field, though clicking the button will not erase any data. This can be seen as misleading and ideally, the delete button would only be active upon saving the new entry for the first time. There will also be changes to where the save button is replaced with a edit button to indicate that the form can be editable and not just utilize the same save button, which users as a result may believe that the form is not able to be changed.</p>
-            <br>
-            <h2>Source Code and Demo</h2>
-            <a href="https://github.com/PipoAT/CS5167-Project-1">Soruce Code hosted on GitHub</a>
-            <br>
-            <a href="https://youtu.be/WMsM3AGvk8g">Demonstration of UI</a>
-            <br>
-            <a href="https://cs-5167-project-1.vercel.app/">Live Application</a>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-</body>
-<div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
-            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Andrew T. Pipo</span>
-        </div>
-
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="https://github.com/PipoAT"><img width="30" height="30"
-                        src="css/images/github-mark.png"></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/andrew-pipo/"><img
-                        width="30" height="30" src="css/images/In-Blue-34.png"></a>
-            </li>
-        </ul>
-    </footer>
-</div>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
