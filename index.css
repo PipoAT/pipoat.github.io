@@ -1,0 +1,33 @@
+.sidebar a:hover,
+.sidebar a:focus,
+.sidebar a:active {
+    color: white;
+}
+
+.sidebar {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar a {
+    color: white;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+main {
+    background-color: #b50000;
+}
+
+.header,
+.main-content {
+    background-color: white;
+}
