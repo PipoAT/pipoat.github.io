@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Parking System Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,6 +25,12 @@
             color: #007BFF;
             font-weight: bold;
         }
+        .img-small {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -41,36 +48,69 @@
     </nav>
     
     <section id="overview">
-        <h2>Project Overview</h2>
-        <h3>Team Members</h3>
+        <h2>Project Overview</h4>
+        <br>
+        <h4>Team Members</h4>
         <ul>
             <li>Owen Edwards (CS) - <a href="mailto:edwardoa@mail.uc.edu">edwardoa@mail.uc.edu</a></li>
             <li>Andrew Pipo (CS) - <a href="mailto:pipoat@mail.uc.edu">pipoat@mail.uc.edu</a></li>
         </ul>
-        <h3>Faculty Advisor</h3>
+        <h4>Faculty Advisor</h4>
         <p>Jeremy Hill - <a href="mailto:hill4jy@ucmail.uc.edu">hill4jy@ucmail.uc.edu</a></p>
-        <h3>Project Topic Areas</h3>
+        <h4>Project Topic Areas</h4>
         <ul>
             <li>IoT</li>
             <li>Mobile Application Development</li>
             <li>Data Analytics</li>
         </ul>
-        <h3>Project Description</h3>
+        <h4>Project Description</h4>
         <p>The Smart Parking System is a mobile application designed to address the challenge of finding available parking in busy urban areas by leveraging IoT technology and data analytics. The system utilizes sensors to monitor parking spots, collecting real-time data that is processed and analyzed to provide drivers with accurate, up-to-date information about available parking spaces.</p>
-        <h3>Project Purpose</h3>
+        <h4>Project Purpose</h4>
         <p>To develop a mobile application that provides real-time parking availability information using IoT sensors and data analytics, helping drivers locate parking more easily in busy areas.</p>
-        <h3>Goal Statement</h3>
+        <h4>Goal Statement</h4>
         <p>The goal of this project is to develop a reliable, user-friendly mobile application that integrates IoT sensors and data analytics to provide real-time parking availability information, reducing search times and alleviating traffic congestion in high-demand urban locations.</p>
     </section>
     
     <section id="user-guide">
         <h2>User Guide</h2>
         <p>Learn how to navigate and use the Smart Parking System effectively.</p>
-        <ul>
-            <li><strong>Creating an Account:</strong> Step-by-step process for signing up.</li>
-            <li><strong>Finding a Parking Spot:</strong> How to check for available spots in real time.</li>
-            <li><strong>Payment and Reservations:</strong> Instructions for booking a spot and payment methods.</li>
-        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Creating an Account</h4>
+                    <p>Step-by-step process for signing up.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Logging In</h4>
+                    <ul>
+                        <li>Enter your username.</li>
+                        <li>Enter your password.</li>
+                        <li>Click the "Login" button.</li>
+                    </ul>
+                    <img src="sps_images/login.png" alt="Login Screen" class="img-fluid img-small">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Finding a Parking Spot</h4>
+                    <ul>
+                        <li>On the welcome screen, click Find Parking</li>
+                        <li>On the Available Parking page, it will automatically display what parking spots are available</li>
+                    </ul>
+                    <img src="sps_images/welcome.png" alt="Welcome Screen" class="img-fluid img-small">
+                    <img src="sps_images/available-parking.png" alt="Available Parking" class="img-fluid img-small">
+                </div>
+                <div class="col-md-6">
+                    <h4>Payment and Reservations</h4>
+                    <ul>
+                        <li>On the Available Parking page, select the Reserve button next to the desired parking space</li>
+                        <li>Confirm that you want to reserve the parking space by clicking Reserve on the popup confirmation window</li>
+                    </ul>
+                    <img src="sps_images/reserve.png" alt="Reserve Parking" class="img-fluid img-small">
+                </div>
+            </div>
+        </div>
     </section>
     
     <section id="installation">
