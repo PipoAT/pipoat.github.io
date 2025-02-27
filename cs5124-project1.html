@@ -129,14 +129,22 @@
                                 <a href="">Demonstration</a>
                                 <br>
                                 <a href="https://cs-5124-project-1.vercel.app/">Live Application</a>
+                                <br>
+                                <br>
+                                <h3>Use of AI and Collaboration</h3>
+                                <p>AI tools including ChatGPT and Copilot were used to help debug the choropleth map code, and help improve the UI/UX. AI was also utilized to help develop the documentation as the doucmentation is presented in an HTML format for my portfolio website</p>
+                                <br>
                             </div>
                             <div class="col-md-4">
                             <h3>Overview</h3>
                             <p>This web application provides interactive visualizations to explore socioeconomic and health data across U.S. counties. The visualizations include:</p>
                             <ul>
                                 <li><strong>Choropleth Map:</strong> Displays geographic data using color gradients.</li>
+                                <img src="cs5124-files/Graph1.png" alt="Choropleth Map" style="max-width: 100%;">
                                 <li><strong>Scatterplot:</strong> Shows relationships between two variables.</li>
+                                <img src="cs5124-files/Graph2.png" alt="Scatterplot" style="max-width: 100%;">
                                 <li><strong>Histogram:</strong> Displays data distribution.</li>
+                                <img src="cs5124-files/Graph3.png" alt="Histogram" style="max-width: 100%;">
                             </ul>
                             <br>
                             <p>The motivation behind this application is to explore how income influences other socioeconomic factors such as health, employment, and education. By providing an interactive visualization, users can uncover relationships between income levels and various demographic indicators.</p>
@@ -148,19 +156,26 @@
                                     <li><a href="https://www.ers.usda.gov/data-products/atlas-of-rural-and-small-town-america/">USDA Atlas of Rural and Small-Town America</a> (Socioeconomic Data).</li>
                                     <li><a href="https://www.cdc.gov/dhdsp/maps/atlas/index.htm">US Heart and Stroke Atlas</a> (Health and Healthcare Data).</li>
                                 </ul>
-                            </div>
-                        </div> 
-                        <br>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-4">
+                                <br>
                                 <h3>Technology Stack</h3>
                                 <ul>
                                     <li><strong>D3.js:</strong> Data visualization library.</li>
                                     <li><strong>JavaScript:</strong> Handles interactivity.</li>
                                     <li><strong>HTML & CSS:</strong> Provides structure and styling.</li>
                                 </ul>
+                                <br>
+                                <h3>Process</h3>
+                                <ul>
+                                    <li><strong>Libraries used:</strong> D3.js, JavaScript, HTML, CSS.</li>
+                                    <li><strong>Additional Frameworks:</strong> Bootstrap</li>
+                                    <li><strong>Code structure:</strong> The application is divided into modules for data loading, visualization, and interactivity.</li>
+                                    <li><strong>Deployment:</strong> Hosted on <strong>Vercel</strong>, with source code available on <a href="https://github.com/PipoAT/CS5124-Project-1">GitHub</a>.</li>
+                                </ul>
                             </div>
+                        </div> 
+                        <br>
+                        <hr>
+                        <div class="row">
                             <div class="col-md-4">
                             <h3>Features</h3>
                             <br>
@@ -170,26 +185,16 @@
                             <p>Users can compare two attributes, such as median income vs. obesity rates, by selecting them from dropdown menus.</p>
                             <h4>3. Histogram</h4>
                             <p>Shows the frequency distribution of selected socioeconomic attributes.</p>
+                            <br>
+                            <h4>Attribute Selection</h4>
+                            <p>Users can select what attribute they would like to compare the economic data against to see the impact it has on other aspects of life.</p>
+                            <img src="cs5124-files/select.png" alt="Histogram" style="max-width: 100%;">
                             </div>
-                            <div class="col-md-4">
-                                <h3>Process</h3>
-                                <ul>
-                                    <li><strong>Libraries used:</strong> D3.js, JavaScript, HTML, CSS.</li>
-                                    <li><strong>Code structure:</strong> The application is divided into modules for data loading, visualization, and interactivity.</li>
-                                    <li><strong>Deployment:</strong> Hosted on <strong>Vercel</strong>, with source code available on <a href="https://github.com/PipoAT/CS5124-Project-1">GitHub</a>.</li>
-                                </ul>
-                                <br>
-                                <h3>Use of AI and Collaboration</h3>
-                                <p>AI tools including ChatGPT and Copilot were used to help debug the choropleth map code, and help improve the UI/UX. AI was also utilized to help develop the documentation as the doucmentation is presented in an HTML format for my portfolio website</p>
-                            </div>
-                        </div>
-                        <br>
-                        <hr>
-                        <div class="row">
                             <div class="col-md-4">
                                 <h3>Challenges</h3>
-                                <p>There was difficulty in implementing the choropleth map and significnat amount of time was spent debugging the code to fully understand where the data for the graph was being saved to be properly called within the JavaScript code.</p>
+                                <p>There was difficulty in implementing the choropleth map and significnat amount of time was spent debugging the code to fully understand where the data for the graph was being saved to be properly called within the JavaScript code. This issue took up a significant portion of development time.</p>
                                 <p>There was also difficulty in having the graphs properly update the titles/text, despire the actual data changing as expected</p>
+                                
                             </div>
                             <div class="col-md-4">
                                 <h3>Future Work</h3>
@@ -198,7 +203,9 @@
                                     <li>Enhancing UI/UX with additional filtering and customization options.</li>
                                     <li>Enhancing UI/UX with improved layout for user friendliness</li>
                                     <li>Address bugs/iisues with updating graphs producing extra white space</li>
+                                    <li>Adjust graphs for improved representation via color choice</li>
                                 </ul>
+                            </div>
                         </div>
                     </div>
                 </main>
