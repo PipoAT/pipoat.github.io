@@ -174,23 +174,45 @@
                         <br>
                         <hr>
                         <div class="row">
-                            <div class="col-md-4">
-                                <h2>Team Contributions</h2>
-                                <ul>
-                                    <li><strong>Data Processing:</strong> Andrew Pipo</li>
-                                    <li><strong>Map Implementation:</strong> Andrew Pipo</li>
-                                    <li><strong>Visualization Charts:</strong> Owen Edwards</li>
-                                    <li><strong>UI/UX Design:</strong> Owen Edwards</li>
-                                    <li><strong>Enhancing map configuration and zoom limits:</strong> Andrew Pipo</li>
-                                    <li><strong>Developing filters and timeline animation:</strong> Andrew Pipo</li>
-                                    <li><strong>Adding filter controls and animation features:</strong> Andrew Pipo</li>
-                                    <li><strong>Refactoring earthquake visualization code:</strong> Andrew Pipo</li>
-                                    <li><strong>Enhancing map with Leaflet and D3 integration:</strong> Andrew Pipo</li>
-                                    <li><strong>Fixing display of bar charts:</strong> Owen Edwards</li>
-                                    <li><strong>Removing extraneous JS library files:</strong> Owen Edwards</li>
-                                    <li><strong>Adding favicon:</strong> Owen Edwards</li>
-                                    <li><strong>Adding background improvements:</strong> Owen Edwards</li>
-                                </ul>
+                            <div class="col-md-12 d-flex justify-content-center">
+                                <div id="commit-history" style="width: 80%; max-height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+                                    <h3 class="text-center">GitHub Commit History</h3>
+                                    <ul id="commit-list" style="list-style-type: none; padding: 0;"></ul>
+                                </div>
+                                <script>
+                                    async function fetchCommitHistory() {
+                                        const repoOwner = "PipoAT";
+                                        const repoName = "CS5124-Project2";
+                                        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/commits`;
+
+                                        try {
+                                            const response = await fetch(apiUrl);
+                                            if (!response.ok) {
+                                                throw new Error("Failed to fetch commit history");
+                                            }
+                                            const commits = await response.json();
+                                            const commitList = document.getElementById("commit-list");
+
+                                            commits.forEach(commit => {
+                                                const listItem = document.createElement("li");
+                                                listItem.style.marginBottom = "10px";
+                                                listItem.innerHTML = `
+                                                    <strong>${commit.commit.author.name}</strong>: 
+                                                    <a href="${commit.html_url}" target="_blank">${commit.commit.message}</a>
+                                                    <br>
+                                                    <small>${new Date(commit.commit.author.date).toLocaleString()}</small>
+                                                `;
+                                                commitList.appendChild(listItem);
+                                            });
+                                        } catch (error) {
+                                            console.error(error);
+                                            const commitList = document.getElementById("commit-list");
+                                            commitList.innerHTML = "<li>Unable to load commit history.</li>";
+                                        }
+                                    }
+
+                                    fetchCommitHistory();
+                                </script>
                             </div>
                         </div>
                     </div>
