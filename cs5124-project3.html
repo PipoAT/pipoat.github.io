@@ -119,23 +119,101 @@
                     </div>
                 </nav>
                 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <br>
-                    <div class="alert alert-dark d-flex align-items-center justify-content-center" role="alert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-exclamation-circle me-2" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
-                        </svg>
-                        <span>Pardon the mess! I am working to update this website to reflect my various works!</span>
-                      </div>
-                      <div class="header text-center rounded border p-3 my-3">
-                        <br>
-                        <h1>CS5124</h1>
-                        <br>
-                        <h2>Project 3: TBA</h2>
-                        <br>
+                    <div class="header text-center rounded border p-3 my-3">
+                        <h1>Data Visualization</h1>
+                        <h2>Project 3: TV Show</h2>
                     </div>
-                    <div class="main-content text-center rounded border p-3 my-3">
-                        <p>Welcome to my updated website! Feel free to explore and let me know if you have any comments, questions, or concerns!</p>
+                    <div class="main-content rounded border p-3 my-3">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h2>Motivation</h2>
+                                <p>This project focuses on text analysis of the Breaking Bad TV show transcripts. Users can explore character dialogues, word frequencies, and sentiment trends to gain insights into the show's narrative and character development.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h2>Data Source</h2>
+                                <p>We pulled transcripts from the open web using an AI-generated Python scraper tailored to the website: </p>
+                            </div>
+                            <div class="col-md-4">
+                                <h2>Visualization Components</h2>
+                                <ul>
+                                    <li><strong>Line Chart:</strong> Displays trends in data over time.</li>
+                                    <li><strong>Bar Chart:</strong> Represents categorical data with rectangular bars.</li>
+                                    <li><strong>Pie Chart:</strong> Visualizes proportions of categories as slices of a circle.</li>
+                                    <li><strong>Arc Cloud:</strong> Highlights relationships or connections using arcs.</li>
+                                    <li><strong>Word Cloud:</strong> Depicts word frequency with varying font sizes.</li>
+                                </ul>
+                                <p>Users can interact with filters to dynamically update the visualizations.</p>
+                            </div>
+                        </div> 
+                        <br>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h2>Design Sketches and Justifications</h2>
+                                <p>Initial design sketches outline the layout and interactions of the application:</p>
+                               
+                                <p>The design prioritizes clarity and usability, ensuring users can easily filter and explore earthquake data.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h2>Findings and Insights</h2>
+                                <ul>
+                                    
+                                </ul>                              
+                            </div>
+                            <div class="col-md-4">
+                                <h2>Development Process</h2>
+                                <ul>
+                                    <li><strong>Technology Stack:</strong> D3.js for data visualization, HTML, CSS, JavaScript for front-end development.</li>
+                                    <li><strong>Code Repository:</strong> <a href="https://github.com/PipoAT/CS5124-Project3">GitHub Repository</a></li>
+                                    <li><strong>Live Demo:</strong> <a href="https://cs-5124-project3.vercel.app/">View Application</a></li>
+                                    <li><strong>Demo Recording:</strong> <a href="">View Demo Video</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12 d-flex justify-content-center">
+                                <div id="commit-history" style="width: 80%; max-height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+                                    <h3 class="text-center">GitHub Commit History</h3>
+                                    <ul id="commit-list" style="list-style-type: none; padding: 0;"></ul>
+                                </div>
+                                <script>
+                                    async function fetchCommitHistory() {
+                                        const repoOwner = "PipoAT";
+                                        const repoName = "CS5124-Project3";
+                                        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/commits`;
+
+                                        try {
+                                            const response = await fetch(apiUrl);
+                                            if (!response.ok) {
+                                                throw new Error("Failed to fetch commit history");
+                                            }
+                                            const commits = await response.json();
+                                            const commitList = document.getElementById("commit-list");
+
+                                            commits.forEach(commit => {
+                                                const listItem = document.createElement("li");
+                                                listItem.style.marginBottom = "10px";
+                                                listItem.innerHTML = `
+                                                    <strong>${commit.commit.author.name}</strong>: 
+                                                    <a href="${commit.html_url}" target="_blank">${commit.commit.message}</a>
+                                                    <br>
+                                                    <small>${new Date(commit.commit.author.date).toLocaleString()}</small>
+                                                `;
+                                                commitList.appendChild(listItem);
+                                            });
+                                        } catch (error) {
+                                            console.error(error);
+                                            const commitList = document.getElementById("commit-list");
+                                            commitList.innerHTML = "<li>Unable to load commit history.</li>";
+                                        }
+                                    }
+
+                                    fetchCommitHistory();
+                                </script>
+                            </div>
+                        </div>
                     </div>
                 </main>
             </div>
