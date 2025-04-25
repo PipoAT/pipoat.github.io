@@ -6,7 +6,7 @@
 
 .sidebar {
     min-height: 100vh;
-    width: auto;
+    width: 20%;
     overflow-y: auto;
 }
 
