@@ -136,10 +136,84 @@
                             <div class="col-md-4">
                                 <h2>Motivation</h2>
                                 <p>This project focuses on text analysis of the Breaking Bad TV show transcripts. Users can explore character dialogues, word frequencies, and sentiment trends to gain insights into the show's narrative and character development.</p>
+                                <p><strong>Breaking Bad</strong> is a critically acclaimed American television drama that aired on AMC 
+                                    from 2008 to 2013. The show spans 5 seasons and 62 episodes, and is widely recognized as one of the greatest TV series of all time.</p>
+                                  <p>Set in Albuquerque, New Mexico, the series chronicles the transformation of <strong>Walter White</strong>, a struggling high school chemistry teacher diagnosed with terminal cancer, into the ruthless 
+                                    drug kingpin known as "Heisenberg." Alongside him is his former student and partner, <strong>Jesse Pinkman</strong>, who navigates the chaos of the methamphetamine trade. 
+                                    Other key characters include <strong>Skyler White</strong> (Walter's wife), <strong>Hank Schrader</strong> (Walter's brother-in-law and DEA agent), <strong>Saul Goodman</strong> 
+                                    (a criminal lawyer), and <strong>Gustavo "Gus" Fring</strong> (a drug distributor posing as a legitimate businessman).</p>
+                                  <p><strong>Breaking Bad</strong> blends elements of <em>crime, thriller, and drama</em>, exploring themes of morality, identity, and consequence. The show's rich storytelling and complex character development make it an 
+                                    excellent subject for analysis. This project uses episode transcripts to explore character importance and word usage throughout the series. 
+                                    Visualizations and data-driven insights help highlight each character's role and evolution across the seasons.</p>
                             </div>
                             <div class="col-md-4">
                                 <h2>Data Source</h2>
-                                <p>We pulled transcripts from the open web using an AI-generated Python scraper tailored to the website: </p>
+                                <p>We pulled transcripts from the open web using an AI-generated Python scraper tailored to the website: 
+                                    <a href="https://transcripts.foreverdreaming.org/viewforum.php?f=165" target="_blank">https://transcripts.foreverdreaming.org/viewforum.php?f=165</a>
+                                </p>
+                                <h3>Python Scraper Code</h3>
+                                <pre>
+                            <code>
+                                import requests
+                                from bs4 import BeautifulSoup
+                                import os
+                                import time
+                                
+                                # Base URLs
+                                base_url = "https://transcripts.foreverdreaming.org"
+                                forum_url = f"{base_url}/viewforum.php?f=165"
+                                
+                                headers = {
+                                    "User-Agent": "Mozilla/5.0"
+                                }
+                                
+                                # Create output folder
+                                os.makedirs("breaking_bad_transcripts", exist_ok=True)
+                                
+                                # Step 1: Get all thread links from the forum
+                                response = requests.get(forum_url, headers=headers)
+                                soup = BeautifulSoup(response.text, "html.parser")
+                                
+                                threads = soup.select("a.topictitle")
+                                
+                                print(f"Found {len(threads)} threads.")
+                                
+                                for thread in threads:
+                                    try:
+                                        title_raw = thread.text.strip()
+                                        title = title_raw.replace(" ", "_").replace(":", "").replace("?", "").replace("/", "-")
+                                        href = thread['href'].split("&")[0]  # remove session ID if present
+                                        thread_url = base_url + href
+                                
+                                        print(f"Fetching: {title_raw}")
+                                        thread_response = requests.get(thread_url, headers=headers)
+                                        thread_soup = BeautifulSoup(thread_response.text, "html.parser")
+                                        
+                                        # Step 2: Extract the first post's transcript
+                                        post_div = thread_soup.find("div", class_="postbody")
+                                        if post_div:
+                                            # Remove quote blocks and signatures
+                                            for tag in post_div.select(".quote, .signature"):
+                                                tag.decompose()
+                                
+                                            # Extract clean text
+                                            transcript = post_div.get_text(separator="\n", strip=True)
+                                
+                                            # Save to file
+                                            filename = f"breaking_bad_transcripts/{title}.txt"
+                                            with open(filename, "w", encoding="utf-8") as f:
+                                                f.write(transcript)
+                                
+                                            print(f"✅ Saved: {filename}")
+                                        else:
+                                            print(f"❌ Transcript not found for {title_raw}")
+                                
+                                        time.sleep(1)  # Be nice to the server
+                                    except Exception as e:
+                                        print(f"Error processing {title_raw}: {e}")
+                                        continue
+                            </code>
+                                </pre>
                             </div>
                             <div class="col-md-4">
                                 <h2>Visualization Components</h2>
