@@ -32,3 +32,7 @@ main {
 .main-content {
     background-color: white;
 }
+
+a {
+    color: white !important;
+}
