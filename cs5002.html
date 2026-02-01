@@ -1,163 +1,327 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Smart Parking System - IoT-based mobile application for real-time parking availability. Senior design project by Andrew Pipo and Owen Edwards.">
-    <meta name="keywords" content="Smart Parking System, IoT, Mobile App, Parking, Android, Flutter, CS5002, Senior Design">
-    <meta name="author" content="Andrew T. Pipo">
-    <meta name="theme-color" content="#f4f4f4">
-    <title>Andrew T. Pipo - Smart Parking System</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        header, nav, section, footer {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
-        }
-        .img-small {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px 0;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Smart Parking System Documentation</h1>
-        <p>Your guide to understanding and using the Smart Parking System.</p>
-    </header>
-    
-    <nav>
-        <a href="#overview">Project Overview</a>
-        <a href="#user-guide">User Guide</a>
-        <a href="#installation">Installation</a>
-        <a href="#faq">FAQ</a>
-        <a href="#support">Support</a>
-    </nav>
-    
-    <section id="overview">
-        <h2>Project Overview</h2>
-        <br>
-        <h4>Team Members</h4>
-        <ul>
-            <li>Owen Edwards (CS) - <a href="mailto:edwardoa@mail.uc.edu">edwardoa@mail.uc.edu</a></li>
-            <li>Andrew Pipo (CS) - <a href="mailto:pipoat@mail.uc.edu">pipoat@mail.uc.edu</a></li>
-        </ul>
-        <h4>Faculty Advisor</h4>
-        <p>Jeremy Hill - <a href="mailto:hill4jy@ucmail.uc.edu">hill4jy@ucmail.uc.edu</a></p>
-        <h4>Project Topic Areas</h4>
-        <ul>
-            <li>IoT</li>
-            <li>Mobile Application Development</li>
-            <li>Data Analytics</li>
-        </ul>
-        <h4>Project Description</h4>
-        <p>The Smart Parking System is a mobile application designed to address the challenge of finding available parking in busy urban areas by leveraging IoT technology and data analytics. The system utilizes sensors to monitor parking spots, collecting real-time data that is processed and analyzed to provide drivers with accurate, up-to-date information about available parking spaces.</p>
-        <h4>Project Purpose</h4>
-        <p>To develop a mobile application that provides real-time parking availability information using IoT sensors and data analytics, helping drivers locate parking more easily in busy areas.</p>
-        <h4>Goal Statement</h4>
-        <p>The goal of this project is to develop a reliable, user-friendly mobile application that integrates IoT sensors and data analytics to provide real-time parking availability information, reducing search times and alleviating traffic congestion in high-demand urban locations.</p>
-    </section>
-    
-    <section id="user-guide">
-        <h2>User Guide</h2>
-        <p>Learn how to navigate and use the Smart Parking System effectively.</p>
-        <div class="container">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Smart Parking System - IoT-based mobile application for real-time parking availability. Senior design project by Andrew Pipo and Owen Edwards.">
+        <meta name="keywords" content="Smart Parking System, IoT, Mobile App, Parking, Android, Flutter, CS5002, Senior Design">
+        <meta name="author" content="Andrew T. Pipo">
+        <meta name="theme-color" content="#b50000">
+        <title>Andrew T. Pipo - Smart Parking System</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link href="index.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
-                    <h4>Creating an Account</h4>
-                    <p>Step-by-step process for signing up.</p>
-                </div>
-                <div class="col-md-6">
-                    <h4>Logging In</h4>
-                    <ul>
-                        <li>Enter your username.</li>
-                        <li>Enter your password.</li>
-                        <li>Click the "Login" button.</li>
+                <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse" id="sidebarMenu">
+                    <div class="position-sticky">
+                    <br>
+                    <img src="UC_CEAS.png" alt="UC CEAS Logo" style="max-width: 100%; background-color: white;">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                        </li>
+    
+                        <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">
+                            About Me
+                        </a>
+                        </li>
+    
+                        <li class="nav-item">
+                        <a class="nav-link" href="Pipo_Andrew_Resume_2025.pdf">
+                            Resume
+                        </a>
+                        </li>
+    
+                        <li class="nav-item">
+                        <a class="nav-link" href="cs5002.html">
+                            Smart Parking System (CS5001/CS5002)
+                        </a>
+                        </li>
+    
+                        <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#DV" role="button" aria-expanded="false" aria-controls="DV">
+                            CS5124 - Data Visualization
+                        </a>
+                        <div class="collapse" id="DV">
+                            <ul class="nav flex-column ms-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="cs5124-vis-wild.html">Vis in the Wild</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cs5124-project1.html">Project 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cs5124-project2.html">Project 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cs5124-project3.html">Project 3</a>
+                            </li>
+                            </ul>
+                        </div>
+                        </li>
+    
+                        <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#UI" role="button" aria-expanded="false" aria-controls="UI">
+                            CS5167 - UI Portfolio
+                        </a>
+                        <div class="collapse" id="UI">
+                            <ul class="nav flex-column ms-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="cs5167-project1.html">Project 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cs5167-project2.html">Project 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cs5167-project3.html">Project 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cs5167-project4.html">Project 4</a>
+                            </li>
+                            </ul>
+                        </div>
+                        </li>
+    
+                        <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#ENED" role="button" aria-expanded="false" aria-controls="ENED">
+                            ENED Portfolio
+                        </a>
+                        <div class="collapse" id="ENED">
+                            <ul class="nav flex-column ms-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://ucba-ened1100.github.io/" target="_blank" rel="noopener noreferrer">ENED1100</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://ucba-ened1120.github.io/" target="_blank" rel="noopener noreferrer">ENED1120</a>
+                            </li>
+                            </ul>
+                        </div>
+                        </li>
+    
+                        <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#projects" role="button" aria-expanded="false" aria-controls="projects">
+                            Notable Projects
+                        </a>
+                        <div class="collapse" id="projects">
+                            <ul class="nav flex-column ms-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/PipoAT/SQLite-Database-Tool" target="_blank" rel="noopener noreferrer">SQLite Database Tool</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/PipoAT/Ethernet-Communication-Tool" target="_blank" rel="noopener noreferrer">Ethernet Communication Tool</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/PipoAT/ENED_DemoTeam_Assignment" target="_blank" rel="noopener noreferrer">ENED Team Assignment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/PipoAT/Evershade" target="_blank" rel="noopener noreferrer">Evershade</a>
+                            </li>
+                            </ul>
+                        </div>
+                        </li>
+    
+                        <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#externallinks" role="button" aria-expanded="false" aria-controls="externallinks">
+                            External Links
+                        </a>
+                        <div class="collapse" id="externallinks">
+                            <ul class="nav flex-column ms-3">
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center" href="https://www.linkedin.com/in/andrew-pipo/" target="_blank" rel="noopener noreferrer">
+                                <img src="background-files/InBug-White.png" alt="LinkedIn" style="width: 20px; height: 20px; margin-right: 8px;">
+                                LinkedIn
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center" href="https://github.com/PipoAT" target="_blank" rel="noopener noreferrer">
+                                <img src="background-files/github-mark-white.png" alt="GitHub" style="width: 20px; height: 20px; margin-right: 8px;">
+                                GitHub
+                                </a>
+                            </li>
+                            </ul>
+                        </div>
+                        </li>
                     </ul>
-                    <img src="sps-images/login.png" alt="Login Screen" class="img-fluid img-small">
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Finding a Parking Spot</h4>
-                    <ul>
-                        <li>On the welcome screen, click Find Parking</li>
-                        <li>On the Available Parking page, it will automatically display what parking spots are available</li>
-                    </ul>
-                    <img src="sps-images/welcome.png" alt="Welcome Screen" class="img-fluid img-small">
-                    <img src="sps-images/available-parking.png" alt="Available Parking" class="img-fluid img-small">
-                </div>
-                <div class="col-md-6">
-                    <h4>Payment and Reservations</h4>
-                    <ul>
-                        <li>On the Available Parking page, select the Reserve button next to the desired parking space</li>
-                        <li>Confirm that you want to reserve the parking space by clicking Reserve on the popup confirmation window</li>
-                    </ul>
-                    <img src="sps-images/reserve.png" alt="Reserve Parking" class="img-fluid img-small">
-                </div>
+                    </div>
+                </nav>
+                <button class="btn btn-dark d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation" style="transition: transform 0.3s;">
+                    <span class="navbar-toggler-icon" style="background-color: white; width: 30px; height: 3px; display: block; margin: 5px auto;"></span>
+                </button>
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <div class="header text-center rounded border p-3 my-3">
+                        <h1>Smart Parking System</h1>
+                        <h2>CS5001/CS5002 Senior Design Project</h2>
+                    </div>
+                    <div class="main-content rounded border p-3 my-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2>Project Overview</h2>
+                                <h4>Team Members</h4>
+                                <ul>
+                                    <li>Owen Edwards (CS) - <a href="mailto:edwardoa@mail.uc.edu">edwardoa@mail.uc.edu</a></li>
+                                    <li>Andrew Pipo (CS) - <a href="mailto:pipoat@mail.uc.edu">pipoat@mail.uc.edu</a></li>
+                                </ul>
+                                <h4>Faculty Advisor</h4>
+                                <p>Jeremy Hill - <a href="mailto:hill4jy@ucmail.uc.edu">hill4jy@ucmail.uc.edu</a></p>
+                                <h4>Project Topic Areas</h4>
+                                <ul>
+                                    <li>IoT (Internet of Things)</li>
+                                    <li>Mobile Application Development</li>
+                                    <li>Data Analytics</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Technologies Used</h2>
+                                <h4>Mobile Application</h4>
+                                <ul>
+                                    <li>Flutter Framework</li>
+                                    <li>Dart Programming Language</li>
+                                    <li>Android Platform</li>
+                                </ul>
+                                <h4>Backend Services</h4>
+                                <ul>
+                                    <li>C# with ASP.NET</li>
+                                    <li>RESTful APIs</li>
+                                </ul>
+                                <h4>Hardware/IoT</h4>
+                                <ul>
+                                    <li>Arduino-based Sensors</li>
+                                    <li>Real-time Data Collection</li>
+                                </ul>
+                                <h4>Project Repository</h4>
+                                <p><a href="https://github.com/PipoAT/SmartParking" target="_blank" rel="noopener noreferrer">View Source Code on GitHub</a></p>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <h2>Project Description</h2>
+                                <p>The Smart Parking System is a mobile application designed to address the challenge of finding available parking in busy urban areas by leveraging IoT technology and data analytics. The system utilizes sensors to monitor parking spots, collecting real-time data that is processed and analyzed to provide drivers with accurate, up-to-date information about available parking spaces.</p>
+                                <p>The mobile application features an intuitive user interface, enabling drivers to quickly and efficiently locate nearby open spots, reducing the time spent searching for parking. By integrating IoT infrastructure, real-time data communication, and advanced analytics, this solution aims to improve urban parking management, decrease traffic congestion, and contribute to a more efficient use of parking resources in densely populated areas.</p>
+                                <h4>Project Purpose</h4>
+                                <p>To develop a mobile application that provides real-time parking availability information using IoT sensors and data analytics, helping drivers locate parking more easily in busy areas.</p>
+                                <h4>Goal Statement</h4>
+                                <p>The goal of this project is to develop a reliable, user-friendly mobile application that integrates IoT sensors and data analytics to provide real-time parking availability information, reducing search times and alleviating traffic congestion in high-demand urban locations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="main-content rounded border p-3 my-3">
+                        <h2>User Guide</h2>
+                        <p>Learn how to navigate and use the Smart Parking System effectively.</p>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h4>Creating an Account</h4>
+                                <p>Follow the step-by-step process for signing up and creating your account in the Smart Parking System mobile application.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Logging In</h4>
+                                <ul>
+                                    <li>Enter your username.</li>
+                                    <li>Enter your password.</li>
+                                    <li>Click the "Login" button.</li>
+                                </ul>
+                                <img src="sps-images/login.png" alt="Login Screen" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h4>Finding a Parking Spot</h4>
+                                <ul>
+                                    <li>On the welcome screen, click Find Parking</li>
+                                    <li>On the Available Parking page, it will automatically display what parking spots are available</li>
+                                </ul>
+                                <img src="sps-images/welcome.png" alt="Welcome Screen" class="img-fluid mb-2">
+                                <img src="sps-images/available-parking.png" alt="Available Parking" class="img-fluid">
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Payment and Reservations</h4>
+                                <ul>
+                                    <li>On the Available Parking page, select the Reserve button next to the desired parking space</li>
+                                    <li>Confirm that you want to reserve the parking space by clicking Reserve on the popup confirmation window</li>
+                                </ul>
+                                <img src="sps-images/reserve.png" alt="Reserve Parking" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="main-content rounded border p-3 my-3">
+                        <h2>Installation Guide</h2>
+                        <p>Steps to set up and run the Smart Parking System mobile application using Flutter and Dart on Android Studio.</p>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h4>Prerequisites</h4>
+                                <ol>
+                                    <li>Install <a href="https://developer.android.com/studio" target="_blank" rel="noopener noreferrer">Android Studio</a> on your computer.</li>
+                                    <li>Download and install the Flutter SDK from <a href="https://flutter.dev/docs/get-started/install" target="_blank" rel="noopener noreferrer">Flutter's official site</a>.</li>
+                                    <li>Ensure Dart is installed (included with Flutter).</li>
+                                    <li>Set up your development environment by configuring the Android emulator or connecting a physical Android device.</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Setup and Run</h4>
+                                <ol start="5">
+                                    <li>Clone the Smart Parking System repository from <a href="https://github.com/PipoAT/SmartParking" target="_blank" rel="noopener noreferrer">GitHub</a>.</li>
+                                    <li>Open the project in Android Studio and run the following command in the terminal to fetch dependencies:
+                                        <pre class="bg-light p-2 rounded"><code>flutter pub get</code></pre>
+                                    </li>
+                                    <li>Build and run the application using:
+                                        <pre class="bg-light p-2 rounded"><code>flutter run</code></pre>
+                                    </li>
+                                    <li>Create an account and log in to start using the system.</li>
+                                    <li>Grant location permissions for real-time parking updates.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="main-content rounded border p-3 my-3">
+                        <h2>Frequently Asked Questions (FAQ)</h2>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h4>Account & Security</h4>
+                                <ul>
+                                    <li><strong>How do I reset my password?</strong><br>Navigate to the login screen and click on "Forgot Password".</li>
+                                    <li><strong>Is my payment information secure?</strong><br>Yes, we use end-to-end encryption for transactions.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Using the App</h4>
+                                <ul>
+                                    <li><strong>What if I can't find a parking spot?</strong><br>The app updates in real-time, but availability can vary. Try checking nearby locations or refreshing the app.</li>
+                                    <li><strong>How accurate is the parking availability?</strong><br>Our IoT sensors provide real-time data, ensuring accurate and up-to-date information.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="main-content rounded border p-3 my-3">
+                        <h2>Support</h2>
+                        <p>For any questions, technical support, or feedback, please reach out to our team:</p>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h4>Team Members</h4>
+                                <ul>
+                                    <li>Owen Edwards - <a href="mailto:edwardoa@mail.uc.edu">edwardoa@mail.uc.edu</a></li>
+                                    <li>Andrew Pipo - <a href="mailto:pipoat@mail.uc.edu">pipoat@mail.uc.edu</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Faculty Advisor</h4>
+                                <p>Jeremy Hill - <a href="mailto:hill4jy@ucmail.uc.edu">hill4jy@ucmail.uc.edu</a></p>
+                                <h4>Additional Resources</h4>
+                                <p><a href="https://github.com/PipoAT/SmartParking" target="_blank" rel="noopener noreferrer">Project Documentation on GitHub</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
             </div>
         </div>
-    </section>
-    
-    <section id="installation">
-        <h2>Installation Guide</h2>
-        <p>Steps to set up and run the Smart Parking System mobile application using Dart on Android Studio.</p>
-        <ol>
-            <li>Install <a href="https://developer.android.com/studio">Android Studio</a> on your computer.</li>
-            <li>Download and install the Flutter SDK from <a href="https://flutter.dev/docs/get-started/install">Flutter's official site</a>.</li>
-            <li>Ensure Dart is installed (included with Flutter).</li>
-            <li>Set up your development environment by configuring the Android emulator or connecting a physical Android device.</li>
-            <li>Clone the Smart Parking System repository from GitHub.</li>
-            <li>Open the project in Android Studio and run the following command in the terminal to fetch dependencies:</li>
-            <pre>flutter pub get</pre>
-            <li>Build and run the application using:</li>
-            <pre>flutter run</pre>
-            <li>Create an account and log in to start using the system.</li>
-            <li>Grant location permissions for real-time parking updates.</li>
-        </ol>
-    </section>
-    
-    <section id="faq">
-        <h2>Frequently Asked Questions (FAQ)</h2>
-        <ul>
-            <li><strong>How do I reset my password?</strong> Navigate to the login screen and click on "Forgot Password".</li>
-            <li><strong>Is my payment information secure?</strong> Yes, we use end-to-end encryption for transactions.</li>
-            <li><strong>What if I can’t find a parking spot?</strong> The app updates in real-time, but availability can vary.</li>
-        </ul>
-    </section>
-    
-    <section id="support">
-        <h2>Support</h2>
-        <p>For any questions or support, please reach out to our team members:</p>
-        <ul>
-            <li>Owen Edwards - <a href="mailto:edwardoa@mail.uc.edu">edwardoa@mail.uc.edu</a></li>
-            <li>Andrew Pipo - <a href="mailto:pipoat@mail.uc.edu">pipoat@mail.uc.edu</a></li>
-        </ul>
-        <p>Or contact our faculty advisor:</p>
-        <p>Jeremy Hill - <a href="mailto:hill4jy@ucmail.uc.edu">hill4jy@ucmail.uc.edu</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Smart Parking System. All Rights Reserved.</p>
-    </footer>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
 </html>
